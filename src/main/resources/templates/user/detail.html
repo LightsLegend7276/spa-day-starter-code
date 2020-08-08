@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<nav th:replace="fragments :: header"></nav>
+<body>
+
+<h1 th:text="${'Welcome, ' + #strings.capitalize(user.username)}"></h1>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>User Name</th>
+        <th>Email</th>
+        <th>Joined on:</th>
+    </tr>
+    <tr>
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.username}"></td>
+        <td th:text="${user.email}"></td>
+        <td th:text="${user.joinDate}"></td>
+    </tr>
+</table>
+
+</body>
+</html>

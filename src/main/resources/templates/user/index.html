@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<nav th:replace="fragments :: header"></nav>
+<body>
+
+<table>
+    <tr>
+        <th>User Name</th>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td>
+            <a th:href="@{/user/detail(id=${user.id})}" th:text="${user.username}"></a>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
